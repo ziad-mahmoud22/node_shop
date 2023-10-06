@@ -1,0 +1,49 @@
+<!-- <div class="container">
+  <button class="btn btn-primary float-end" (click)="changeLang()">{{lang}}</button>
+</div>
+<div class="row w-75 mt-5 mx-auto">
+  <input type="text" class="control-form" [(ngModel)]="searchValue">
+</div> -->
+
+<div class="parent container mt-5">
+  <div class="row justify-content-center">
+
+      <!-- movie card -->
+      <div class="card movie_card" *ngFor="let movie of allProducts">
+          <img [src]="movie.imageUrl" class="card-img-top" alt="...">
+          <div class="card-body">
+              <h5 class="card-title">{{movie.title}}</h5>
+              <p>{{movie.price}} $</p>
+              <button class="btn btn-light d-block m-1" [routerLink]="['/edit-product', movie._id]">Edit</button>
+              
+              <button class="btn btn-danger d-block m-1" (click)="toggleDialog()">
+                  Delete
+              </button>
+          </div>
+
+          
+          <div id="dialog-box" *ngIf="this.deleteDialog">
+            <div class="dialog-box-header">
+              <h1>Are you sure you want to delete this product ?</h1>
+            </div>
+            <!-- <div class="dialog-box-body">
+              This is the modal body.
+            </div> -->
+            <div class="dialog-box-footer">
+              <button type="button" (click)="toggleDialog()" class="dialog-box-close">Close</button>
+              <button type="button" (click)="delete(movie._id)" class="dialog-box-close">Yes, Delete</button>
+            </div>
+          </div>
+
+      </div>
+
+  </div>
+</div>
+
+<!-- <div class="container my-5">
+<mat-paginator [length]="totalMovies"
+          [pageSize]="moviesPerPage"
+          aria-label="Select page"
+          (page)="changePage($event)">
+</mat-paginator>
+</div> -->

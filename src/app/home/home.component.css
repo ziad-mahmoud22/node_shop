@@ -1,0 +1,90 @@
+#title {
+  margin-top: 30px;
+}
+#searchBar {
+  margin-top: 10px;
+  text-align: center;
+}
+input {
+  width: 50%;
+  padding: 12px 15px;
+  outline: none;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  border: 3px solid #088179;
+  border-radius: 10px;
+  text-align: center;
+}
+#addToCart {
+  position: relative;
+}
+.cart {
+  width: 40px;
+  height: 40px;
+  line-height: 40px; 
+  /* border-radius: 50px;
+  background-color: #e8f6ea; */
+  font-weight: 500;
+  color: #088178;
+  /* border: 1px solid #cce7d0;
+  position: absolute;
+  top: 1px;
+  left: 100px; */
+}
+img {
+  pointer-events: none;
+}
+.movie_card{
+  padding: 0 !important;
+  width: 22rem;
+  margin:14px; 
+  border-radius: 10px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
+}
+.movie_card img{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  height: 33rem;
+}
+.movie_info{
+  color: #5e5c5c;
+}
+
+.card-title{
+  width: 80%;
+  /* height: 4rem; */
+}
+.play_button{
+  background-color: #ff3d49;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  right: 20px;
+  bottom: 111px;
+  font-size: 27px;
+  padding-left: 21px;
+  padding-top: 16px;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.credits{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 2px solid #8e24aa;
+  font-size: 18px;
+}
+.credits .card-body{
+  padding: 0;
+}
+.credits p{
+  padding-top: 15px;
+  padding-left: 18px;
+}
+.credits .card-body i{
+  color: #8e24aa;
+}

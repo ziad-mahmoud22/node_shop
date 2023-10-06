@@ -1,0 +1,13 @@
+<div class="wrapper">
+    <form class="form-signin" (ngSubmit)="onSubmit()">
+  
+      <label for="title">Email</label>
+      <input type="email" class="form-control" name="email" id="title" [(ngModel)]="email" placeholder="example@email.com" />
+  
+      <label for="imageUrl">Password</label>
+      <input type="password" class="form-control" name="password" id="imageUrl" [(ngModel)]="password" placeholder="Password"/>
+  
+      <button class="bttn" type="submit">Register</button>   
+    </form>
+    <h3 style="color: green; text-align: center;">{{this.word}}</h3>
+  </div>

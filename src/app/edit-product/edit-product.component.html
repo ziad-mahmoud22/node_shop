@@ -1,0 +1,24 @@
+<div class="wrapper">
+  <form class="form-signin" (ngSubmit)="onSubmit()">
+
+    <label for="title">Title</label>
+    <input type="text" class="form-control" name="title" id="title" [(ngModel)]="title" placeholder="title" />
+
+    <label for="imageUrl">Image Link</label>
+    <input type="text" class="form-control" name="imageUrl" id="imageUrl" [(ngModel)]="imageUrl" placeholder="imageUrl"/>
+
+    <label for="price">Price</label>
+    <input type="number" step="0.01" class="form-control" name="price" id="price" [(ngModel)]="price" placeholder="price" />
+
+    <label for="description">Description</label>
+    <textarea class="form-control" placeholder="description" name="description" id="description" [(ngModel)]="description" cols="30" rows="7"
+              style="margin-top: 15px;
+              margin-bottom: 15px;
+              border-bottom-left-radius: 0;
+              border-bottom-right-radius: 0;
+              border: 1px solid #00695C;"></textarea>
+
+    <button class="bttn" type="submit">Edit Product</button>   
+  </form>
+  <h3 style="color: green; text-align: center;">{{this.word}}</h3>
+</div>

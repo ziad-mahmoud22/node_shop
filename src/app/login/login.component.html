@@ -1,0 +1,14 @@
+
+<div class="wrapper">
+  <form class="form-signin" (ngSubmit)="onSubmit()">
+
+    <label for="email">Email Address</label>
+    <input type="email" class="form-control" name="email" id="email" [(ngModel)]="mail" placeholder="example@mail.com" />
+
+    <label for="password">Password</label>
+    <input type="password" class="form-control" name="password" id="password" [(ngModel)]="pw" placeholder="Password"/>
+
+    <button class="bttn" type="submit">Login</button>   
+  </form>
+  <h2 style="text-align: center;">{{this.word}}</h2>
+</div>

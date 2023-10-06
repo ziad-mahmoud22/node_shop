@@ -1,0 +1,70 @@
+<div class="movie-ticket">
+  <div class="container-fluid">
+    <!-- Item -->
+    <div class="ui-item">
+      <!-- Head -->
+      <div class="ui-head">
+        <!-- Background Image -->
+        <img
+          src="https://img.freepik.com/premium-photo/yellow-gradient-background_64749-3725.jpg"
+          alt=""
+          class="img-responsive bg-img"
+        />
+        <!-- Transparent Background -->
+        <div class="ui-trans clearfix">
+          <!-- Image -->
+          <img src={{path+selectedProduct.imageLink}} alt="" class="img-responsive" />
+          <!-- Details -->
+          <div class="ui-details clearfix">
+            <div style="margin-left: 22%;color: azure;font-size: x-small;">
+            <!-- Movie Name -->
+            
+            
+            <br>
+            <br>
+            <br>
+            <h3 style="font-size :18px;">  {{ "Title: "+selectedProduct.title }} </h3>
+            <br>
+            
+            <h3 style="font-size :18px;">  {{ "Country: "+selectedProduct.country }} </h3>
+            <br>
+            <h3 style="font-size :18px;">  {{ "Language: "+selectedProduct.language }} </h3>
+            <br>
+            <h3 style="font-size :18px;">  {{ "No.Pages: "+selectedProduct.Pages }} </h3>
+            <br>
+            <h3 style="font-size :18px;">  {{ "Publish Year: "+selectedProduct.year }} </h3>
+
+            
+            </div>
+            <!-- Labels -->
+            <!-- Paragraph -->
+           
+            <!-- Heading -->
+          </div>
+        </div>
+      </div>
+      <!-- Review -->
+      <div class="ui-review">
+        <!-- Heading -->
+        <h3>{{"Published By: "+selectedProduct.author}}</h3>
+        <!-- Paragraph -->
+        <a href={{selectedProduct.link}}>
+        <p style="font-size: x-small;">
+          Click Me For More Details!
+        </p>
+        </a>
+
+    
+
+        <!-- </mat-chip-listbox> -->
+        <!-- Buttons -->
+        <a class="ui-btn bg-red" routerLink="/shop"
+          ><i class="fa fa-dot-circle-o" ></i> Go Back</a
+        >
+        <a class="ui-btn bg-green" routerLink="/shop" (click)="this.addprod(selectedProduct)"
+          ><i class= "fa fa-book" ></i> Buy Item</a
+        >
+      </div>
+    </div>
+  </div>
+</div>

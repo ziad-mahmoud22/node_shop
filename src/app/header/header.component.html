@@ -1,0 +1,28 @@
+<section id="header">
+  <a routerLink="">
+      <img src="../../assets/logo.png" class="logo" alt="Cara">
+  </a>
+
+  <div>
+      <ul id="navbar">
+          <li>
+            <li><a routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" id="home" routerLink="">Home</a></li>
+            <li><a routerLinkActive="active" id="shop" routerLink="shop">Shop</a></li>
+
+            <li><a *ngIf="this.apiServe.isAuthenticated"  routerLinkActive="active" id="cart" routerLink="cart">Cart</a></li>
+            <li><a *ngIf="this.apiServe.isAuthenticated"  routerLinkActive="active" id="orders" routerLink="orders">Orders</a></li>
+            <li><a *ngIf="this.apiServe.isAuthenticated"  routerLinkActive="active" id="add-product" routerLink="add-product">Add Products</a></li>
+            <li><a *ngIf="this.apiServe.isAuthenticated"  routerLinkActive="active" id="admin-products" routerLink="admin-products">Admin Products</a>
+          </li>
+
+          <li>
+            <li><a *ngIf="!this.apiServe.isAuthenticated" routerLinkActive="active" id="login" routerLink="login">Login</a></li>
+            <li><a *ngIf="!this.apiServe.isAuthenticated" routerLinkActive="active" id="register" routerLink="register">Register</a></li>
+            <li><a *ngIf="this.apiServe.isAuthenticated" (click)="this.apiServe.logout()" id="logout" routerLink="logout">Logout</a>
+          </li>
+      </ul>
+  </div>
+</section>
+
+<!-- <li><a href=""><i class="fas fa-shopping-cart"></i></a></li> -->
+<!-- <li><a href=""><i class="fas fa-sign-in-alt"></i></a></li> -->

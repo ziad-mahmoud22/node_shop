@@ -1,0 +1,51 @@
+<div id="title">
+  <h3 style="text-align: center;">Search any book you want from Google books!</h3>
+  <h4 style="text-align: center;">And We Will Deliver :))</h4>
+</div>
+<div id="searchBar" class="container">
+  <input placeholder="Search your favourite!!" [(ngModel)]="searchValue" type="text">
+  <button class="btn btn-primary p-3 mx-2" type="button" (click)="execSearch()">Search</button>
+</div>
+<!-- <div class="container">
+  <button class="btn btn-primary float-end" (click)="changeLang()">{{lang}}</button>
+</div> -->
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+      <!-- movie card -->
+      <div class="card movie_card" *ngFor="let movie of books">
+          <a [routerLink]="['/product', movie.volumeInfo.id]">
+              <img [src]="movie.volumeInfo.imageLinks.thumbnail" class="card-img-top" alt="...">
+          </a>
+          <div class="card-body">
+              <h5 class="card-title">{{movie.volumeInfo.title}}</h5>
+
+              <p class="movie_info">{{movie.volumeInfo.publishedDate}}</p>
+
+              <span *ngIf="movie.volumeInfo.averageRating" class="movie_info float-right">
+                {{movie.volumeInfo.averageRating}} / 5</span>
+
+              <p *ngIf="movie.showMovieDetails">{{movie.volumeInfo.description}}</p>
+              
+              <!-- <button class="btn btn-success d-block m-1" [disabled]="watchProp">watch</button> -->
+              <button class="btn btn-warning d-block m-1" (click)="toggleDetails(movie.id)">
+                  {{movie.showMovieDetails? 'Hide': 'See'}} Details
+              </button>
+              
+              <a id="addToCart" href="">
+                <i class='cart fal fa-shopping-cart'></i>
+              </a>
+          </div>
+      </div>
+
+  </div>
+</div>
+
+<!-- <div class="container my-5">
+<mat-paginator [length]="totalMovies"
+          [pageSize]="moviesPerPage"
+          aria-label="Select page"
+          (page)="changePage($event)">
+</mat-paginator>
+</div> -->
+

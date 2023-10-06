@@ -1,0 +1,34 @@
+<div class="cart">
+    <div class="cart-container">
+        <div class="cart-card" *ngFor="let item of cart; let isFirst = first;">
+            <div *ngIf="!isFirst">
+                <div class="image">
+                    <img src={{path+item.imageLink}} alt="">
+                </div>
+                <div class="content">
+                    <div class="title">{{item.title}}</div>
+                    <div class="author">{{item.author}}</div>
+                    <!-- <div class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis, totam officiis ab magni voluptatem error placeat reiciendis id consequuntur soluta molestias? Sint eligendi libero aspernatur reiciendis est facere quisquam ratione.</div> -->
+                    <div class="lang-year">
+                        <div>Language: {{item.language}}</div>
+                        <div>Year : {{item.year}} </div>
+                    </div>
+                    <div class="price">{{item.price}}$</div>
+                    <div class="quantity-ctrl">
+                        <div class="counter">
+                            <a class="inc cart-btn"><i class="fa-solid fa-plus"></i></a>
+                            <div class="quantity">1</div>
+                            <a class="dec cart-btn"><i class="fa-solid fa-minus"></i></a>
+                        </div>
+                        <!-- <a  class="remove cart-btn"><i (click)="deleteprod(item)" class="fa-regular fa-trash-can"></i>remove</a> -->
+                        <a class="ui-btn bg-green" (click)="this.deleteprod(item)"
+          ><i class= "fa fa-book" ></i> Buy Item</a
+        >
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>

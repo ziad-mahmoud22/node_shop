@@ -1,0 +1,46 @@
+
+<br>
+<div class="title-bar">
+    Books Store
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="row w-75 mx-auto mt-5">
+    <input type="text" class="form-control" [(ngModel)]="searchValue" />
+  </div>
+  
+  <mat-paginator *ngIf="totalmovies"
+    [length]="totalmovies"
+    [pageSize]="moviesPerPage"
+    [pageSizeOptions]="[5, 10, 21]"
+    aria-label="Select page"
+    (page)="changePage($event)"
+  >
+  </mat-paginator>
+  
+  
+  <div class="wrap" *ngFor="let item of allMovies">
+
+    <div class="thumbnail">
+      <a [routerLink]="['/product',item.id]">
+      <img src={{path+item.imageLink}}/>
+      <div class="overlay"><a href="#">Buy</a></div>
+    </a>
+    </div>
+    <div class="small-info">
+      {{item.title}} - Price: {{item.price}}
+      <div *ngIf="item.showBookDetails">
+        <br>
+        <div>
+          <p>Published By: {{ item.author }}</p>
+         <p>No.Pages:  {{ item.pages }}</p> 
+        </div>
+      </div>
+      <button class="btn btn-warning d-block m-1" (click)="showDetails(item.title)"> 
+        {{ item.showBookDetails ? "Hide" : "See" }} Details
+      </button>
+    </div>
+    
+    
+  </div>
